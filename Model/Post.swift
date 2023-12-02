@@ -8,10 +8,9 @@
 import Foundation
 
 
-struct Post {
+struct Post: Hashable {
     var title: String
     var description: String
     var hrs: Int
     var mins: Int
-    var hashTags: String
 }

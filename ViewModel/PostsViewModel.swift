@@ -7,6 +7,6 @@
 
 import Foundation
 
-class PostsViewModel {
-    // some logic here
+class PostsViewModel: ObservableObject {
+    
 }
