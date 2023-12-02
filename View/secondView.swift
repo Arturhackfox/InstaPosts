@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct secondView: View {
-    @State var textField = ""
-    
+   
+    @ObservedObject var vm: PostsViewModel
     
     var body: some View {
         VStack(spacing: 20){
             
-              Text(textField)
+            Text(vm.textField)
                 .padding(.top, 25)
                 .frame(maxWidth: 555, maxHeight: 500)
                 .background(Color.cyan)
@@ -28,7 +28,7 @@ struct secondView: View {
                 .padding(.top, 50)
                 .fontDesign(.serif)
                 
-            TextField("I've learned...", text: $textField)
+            TextField("I've learned...", text: $vm.textField)
                 .multilineTextAlignment(.center)
                 .fontDesign(.monospaced)
             
@@ -39,6 +39,14 @@ struct secondView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Generate") {
                     // generating final 
+                    vm.currentPostModel?.description = vm.textField
+                    if let model = vm.currentPostModel {
+                        print(model.title)
+                        print(model.description)
+                        print(model.hrs)
+                        print(model.mins)
+                    }
+  
                 }
             }
         })
@@ -46,5 +54,5 @@ struct secondView: View {
 }
 
 #Preview {
-    secondView()
+    secondView(vm: PostsViewModel())
 }
