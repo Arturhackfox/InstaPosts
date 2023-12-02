@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View { 
     @State var title = " "
     @State var selectedHour = 0
     @State var selectedMins = 0
     @State var mainText = " "
     
+
     var totalNumberInvested: String {
         let totalMinutes = selectedHour * 60 + selectedMins
         let hours = totalMinutes / 60
@@ -48,20 +49,19 @@ struct ContentView: View {
                 .pickerStyle(.wheel)
                 Spacer()
                 
-                //Button "next"
-                
-                Button(action: {
-                    //Nav link destination
-                }, label: {
+                //Button "next" to second view
+                NavigationLink {
+                    secondView()
+                } label: {
                     Text("Next")
                         .padding()
                         .frame(width: 130)
                         .foregroundStyle(Color.yellow)
                         .background(Color.yellow.secondary)
                         .clipShape(Capsule())
-                        
-                })
-                
+                }
+
+
             }
             .navigationTitle("iPost✨")
             .padding()
