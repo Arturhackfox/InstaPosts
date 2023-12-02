@@ -27,16 +27,22 @@ struct ContentView: View {
                 // title
                 Text("Enter new title")
                     .font(.headline)
+                    .fontDesign(.serif)
                 TextField("Type new title...", text: $title)
                     .textFieldStyle(.roundedBorder)
+                    .fontDesign(.serif)
+                    .autocorrectionDisabled(true)
                 
                 // time invested
                 Text(totalNumberInvested)
                     .font(.headline)
+                    .fontDesign(.serif)
+                    .padding(.top, 30)
                 
                 Picker("hours", selection: $selectedHour) {
                     ForEach(0..<10) { x in
                         Text(x.description)
+                            .fontDesign(.serif)
                     }
                 }
                 .pickerStyle(.segmented)
@@ -44,6 +50,7 @@ struct ContentView: View {
                 Picker("Minutes", selection: $selectedMins) {
                     ForEach(0..<61) { m in
                         Text("\(m) mins")
+                            .fontDesign(.serif)
                     }
                 }
                 .pickerStyle(.wheel)
@@ -59,6 +66,9 @@ struct ContentView: View {
                         .foregroundStyle(Color.yellow)
                         .background(Color.yellow.secondary)
                         .clipShape(Capsule())
+                }
+                .onTapGesture {
+                    // save selected data
                 }
 
 
