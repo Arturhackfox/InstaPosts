@@ -14,6 +14,8 @@
 		32AE84CD2B1B32C400F372E0 /* InstaPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE84CC2B1B32C400F372E0 /* InstaPostTests.swift */; };
 		32AE84D72B1B32C400F372E0 /* InstaPostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE84D62B1B32C400F372E0 /* InstaPostUITests.swift */; };
 		32AE84D92B1B32C400F372E0 /* InstaPostUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE84D82B1B32C400F372E0 /* InstaPostUITestsLaunchTests.swift */; };
+		32AE84E92B1B33A300F372E0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE84E82B1B33A300F372E0 /* Post.swift */; };
+		32AE84EC2B1B33EC00F372E0 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE84EB2B1B33EC00F372E0 /* PostsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		32AE84D22B1B32C400F372E0 /* InstaPostUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPostUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AE84D62B1B32C400F372E0 /* InstaPostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPostUITests.swift; sourceTree = "<group>"; };
 		32AE84D82B1B32C400F372E0 /* InstaPostUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPostUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		32AE84E82B1B33A300F372E0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		32AE84EB2B1B33EC00F372E0 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				32AE84B92B1B32C300F372E0 /* InstaPost */,
+				32AE84E52B1B336600F372E0 /* View */,
+				32AE84E62B1B336E00F372E0 /* Model */,
+				32AE84E72B1B337200F372E0 /* ViewModel */,
 				32AE84CB2B1B32C400F372E0 /* InstaPostTests */,
 				32AE84D52B1B32C400F372E0 /* InstaPostUITests */,
 				32AE84B82B1B32C300F372E0 /* Products */,
@@ -96,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				32AE84BA2B1B32C300F372E0 /* InstaPostApp.swift */,
-				32AE84BC2B1B32C300F372E0 /* ContentView.swift */,
 				32AE84BE2B1B32C300F372E0 /* Assets.xcassets */,
 				32AE84C02B1B32C300F372E0 /* InstaPost.entitlements */,
 				32AE84C12B1B32C300F372E0 /* Preview Content */,
@@ -127,6 +133,30 @@
 				32AE84D82B1B32C400F372E0 /* InstaPostUITestsLaunchTests.swift */,
 			);
 			path = InstaPostUITests;
+			sourceTree = "<group>";
+		};
+		32AE84E52B1B336600F372E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32AE84BC2B1B32C300F372E0 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32AE84E62B1B336E00F372E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32AE84E82B1B33A300F372E0 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32AE84E72B1B337200F372E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				32AE84EB2B1B33EC00F372E0 /* PostsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32AE84EC2B1B33EC00F372E0 /* PostsViewModel.swift in Sources */,
+				32AE84E92B1B33A300F372E0 /* Post.swift in Sources */,
 				32AE84BD2B1B32C300F372E0 /* ContentView.swift in Sources */,
 				32AE84BB2B1B32C300F372E0 /* InstaPostApp.swift in Sources */,
 			);
