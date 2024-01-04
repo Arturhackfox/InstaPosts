@@ -6,22 +6,36 @@
 //
 
 import Foundation
+import UIKit
 
 class PostsViewModel: ObservableObject {
     @Published var currentPostModel: Post?
-    @Published var textField = ""
-    @Published var title = " "
-    @Published var selectedHour = 0
+    @Published var textField = "" {
+        didSet {
+            self.updatePostModel()
+        }
+    }
+    @Published var title = " " {
+        didSet {
+            self.updatePostModel()
+        }
+    }
+    @Published var selectedHour = 0 {
+        didSet {
+            self.updatePostModel()
+        }
+    }
     @Published var selectedMins = 0 {
         didSet {
             self.updatePostModel()
         }
     }
-    @Published var mainText = " "
-    @Published var isSecondView = false
-    var finalText: String {
-        title + " " + textField + " " + "Time invested today: \(selectedHour)hrs \(selectedMins)mins" + mainText
+    @Published var mainText = " " {
+        didSet {
+            self.updatePostModel()
+        }
     }
+    @Published var isSecondView = false
     
     var totalNumberInvested: String {
         let totalMinutes = selectedHour * 60 + selectedMins
@@ -29,9 +43,26 @@ class PostsViewModel: ObservableObject {
         let minutes = totalMinutes % 60
         return "Today you invested: \(hours)hrs\(minutes)mins"
     }
-    
     func updatePostModel(){
-        currentPostModel = Post(title: self.title, description: self.mainText, hrs: self.selectedHour, mins: self.selectedMins)
+        currentPostModel = Post(title: self.title, description: self.textField, hrs: self.selectedHour, mins: self.selectedMins)
+    }
+    func copyContent() {
+        let contentToCopy = """
+        Title: \(self.title)
+        Time invested: \(self.selectedHour)hrs \(self.selectedMins)mins
+        .
+        .
+        .
+        .
+        \(self.mainText)
+        .
+        .
+        .
+        .
+        #someHastags #someHastags #someHastags #someHastags #someHastags #someHastags #someHastags #someHastags
+        """
+
+        UIPasteboard.general.string = contentToCopy
     }
 }
 
