@@ -19,6 +19,7 @@
 		32AE84EE2B1B442D00F372E0 /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE84ED2B1B442D00F372E0 /* secondView.swift */; };
 		32AE84F02B1B47BC00F372E0 /* finalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE84EF2B1B47BC00F372E0 /* finalView.swift */; };
 		32AE84F22B1B545F00F372E0 /* buttonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE84F12B1B545F00F372E0 /* buttonView.swift */; };
+		32F53C302B47D574006B8434 /* firstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F53C2F2B47D574006B8434 /* firstView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		32AE84ED2B1B442D00F372E0 /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
 		32AE84EF2B1B47BC00F372E0 /* finalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalView.swift; sourceTree = "<group>"; };
 		32AE84F12B1B545F00F372E0 /* buttonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonView.swift; sourceTree = "<group>"; };
+		32F53C2F2B47D574006B8434 /* firstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				32AE84BC2B1B32C300F372E0 /* ContentView.swift */,
+				32F53C2F2B47D574006B8434 /* firstView.swift */,
 				32AE84ED2B1B442D00F372E0 /* secondView.swift */,
 				32AE84EF2B1B47BC00F372E0 /* finalView.swift */,
 				32AE84F12B1B545F00F372E0 /* buttonView.swift */,
@@ -303,6 +306,7 @@
 				32AE84E92B1B33A300F372E0 /* Post.swift in Sources */,
 				32AE84F22B1B545F00F372E0 /* buttonView.swift in Sources */,
 				32AE84F02B1B47BC00F372E0 /* finalView.swift in Sources */,
+				32F53C302B47D574006B8434 /* firstView.swift in Sources */,
 				32AE84BD2B1B32C300F372E0 /* ContentView.swift in Sources */,
 				32AE84BB2B1B32C300F372E0 /* InstaPostApp.swift in Sources */,
 			);

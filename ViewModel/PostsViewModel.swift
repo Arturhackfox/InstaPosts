@@ -10,7 +10,7 @@ import UIKit
 
 class PostsViewModel: ObservableObject {
     @Published var currentPostModel: Post?
-    @Published var textField = "" {
+    @Published var todayILearnedTextfield = "" {
         didSet {
             self.updatePostModel()
         }
@@ -41,10 +41,11 @@ class PostsViewModel: ObservableObject {
         let totalMinutes = selectedHour * 60 + selectedMins
         let hours = totalMinutes / 60
         let minutes = totalMinutes % 60
-        return "Today you invested: \(hours)hrs\(minutes)mins"
+        return "\(hours)hrs\(minutes)mins"
     }
+
     func updatePostModel(){
-        currentPostModel = Post(title: self.title, description: self.textField, hrs: self.selectedHour, mins: self.selectedMins)
+        currentPostModel = Post(title: self.title, description: self.todayILearnedTextfield, hrs: self.selectedHour, mins: self.selectedMins)
     }
     func copyContent() {
         let contentToCopy = """

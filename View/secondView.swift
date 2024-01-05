@@ -14,21 +14,22 @@ struct secondView: View {
     var body: some View {
         VStack(spacing: 20){
             
-            Text(vm.textField)
-                .padding(.top, 25)
+            Text(vm.todayILearnedTextfield)
+                .shadow(color: .primary.opacity(0.1), radius: 1)
                 .frame(maxWidth: 555, maxHeight: 500)
+                .padding(.top, 25)
                 .background(Color.cyan)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                .shadow(radius: 12)
                 .multilineTextAlignment(.center)
                 
                 
             
-            Text("What you learned today ?")
+            Text("What did you learn today ?")
+                .shadow(radius: 4)
                 .padding(.top, 50)
                 .fontDesign(.serif)
                 
-            TextField("I've learned...", text: $vm.textField)
+            TextField("Today I learned..", text: $vm.todayILearnedTextfield)
                 .multilineTextAlignment(.center)
                 .fontDesign(.monospaced)
             
