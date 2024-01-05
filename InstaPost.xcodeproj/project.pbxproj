@@ -22,6 +22,7 @@
 		32C0876E2B47DD7500512E9E /* firstViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C0876D2B47DD7500512E9E /* firstViewButton.swift */; };
 		32C087702B47E46500512E9E /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C0876F2B47E46500512E9E /* CustomBackButton.swift */; };
 		32C087722B47E7F500512E9E /* CustomGenerateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C087712B47E7F500512E9E /* CustomGenerateButtonView.swift */; };
+		32C087742B48067900512E9E /* dotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C087732B48067900512E9E /* dotsView.swift */; };
 		32F53C302B47D574006B8434 /* firstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F53C2F2B47D574006B8434 /* firstView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		32C0876D2B47DD7500512E9E /* firstViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewButton.swift; sourceTree = "<group>"; };
 		32C0876F2B47E46500512E9E /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		32C087712B47E7F500512E9E /* CustomGenerateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGenerateButtonView.swift; sourceTree = "<group>"; };
+		32C087732B48067900512E9E /* dotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dotsView.swift; sourceTree = "<group>"; };
 		32F53C2F2B47D574006B8434 /* firstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 				32C0876F2B47E46500512E9E /* CustomBackButton.swift */,
 				32C087712B47E7F500512E9E /* CustomGenerateButtonView.swift */,
 				32AE84EF2B1B47BC00F372E0 /* finalView.swift */,
+				32C087732B48067900512E9E /* dotsView.swift */,
 				32AE84F12B1B545F00F372E0 /* buttonView.swift */,
 			);
 			path = View;
@@ -316,6 +319,7 @@
 				32AE84EE2B1B442D00F372E0 /* secondView.swift in Sources */,
 				32C087722B47E7F500512E9E /* CustomGenerateButtonView.swift in Sources */,
 				32AE84E92B1B33A300F372E0 /* Post.swift in Sources */,
+				32C087742B48067900512E9E /* dotsView.swift in Sources */,
 				32AE84F22B1B545F00F372E0 /* buttonView.swift in Sources */,
 				32AE84F02B1B47BC00F372E0 /* finalView.swift in Sources */,
 				32F53C302B47D574006B8434 /* firstView.swift in Sources */,

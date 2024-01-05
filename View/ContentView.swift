@@ -12,9 +12,17 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            firstView()
-            .navigationTitle("iPost✨")
+            ZStack {
+                Color.black
+                LinearGradient(colors: [.cyan.opacity(0.7), .black], startPoint: .top, endPoint: .bottomTrailing)
+                ScrollView {
+                    firstView()
+
+                }
+                .navigationTitle("iPost✨")
             .padding()
+            }
+            .ignoresSafeArea()
         }
         .environment(\.colorScheme, .dark)
     }

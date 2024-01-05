@@ -16,7 +16,7 @@ struct CustomGenerateButtonView: View {
         } label: {
             Text("Generate")
                 .shadow(radius: 2)
-                .fontDesign(.serif)
+                .fontDesign(.rounded)
                 .foregroundColor(.white.opacity(0.8))
                 .frame(width: 87, height: 32)
                 .background(Color.cyan.opacity(0.3))

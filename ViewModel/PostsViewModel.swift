@@ -15,7 +15,7 @@ class PostsViewModel: ObservableObject {
             self.updatePostModel()
         }
     }
-    @Published var title = " " {
+    @Published var title = "" {
         didSet {
             self.updatePostModel()
         }
@@ -30,12 +30,18 @@ class PostsViewModel: ObservableObject {
             self.updatePostModel()
         }
     }
-    @Published var mainText = " " {
+    @Published var mainText = "" {
         didSet {
             self.updatePostModel()
         }
     }
     @Published var isSecondView = false
+    @Published var whatILearnedArray = [String]() {
+        didSet {
+            index += 1
+        }
+    }
+    @Published var index = 1
     
     var totalNumberInvested: String {
         let totalMinutes = selectedHour * 60 + selectedMins
@@ -50,12 +56,13 @@ class PostsViewModel: ObservableObject {
     func copyContent() {
         let contentToCopy = """
         Title: \(self.title)
-        Time invested: \(self.selectedHour)hrs \(self.selectedMins)mins
+        🕰️ Time invested: \(selectedHour)hrs \(selectedMins)mins
         .
         .
         .
         .
-        \(self.mainText)
+        ✅ New knowledge:
+        \(whatILearnedArray.joined(separator: "\n"))
         .
         .
         .
