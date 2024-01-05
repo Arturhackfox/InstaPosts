@@ -9,21 +9,20 @@ import SwiftUI
 
 struct finalView: View {
     @ObservedObject var vm: PostsViewModel
-    var post: Post
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(post.title)
+            Text(vm.currentPostModel?.title ?? "")
                 .bold()
                 .font(.title)
-                Text("Time invested: \(post.hrs)hrs \(post.mins)mins")
+            Text("Time invested: \(vm.currentPostModel?.hrs ?? 0)hrs \(vm.currentPostModel?.mins ?? 0)mins")
             Text("""
 .
 .
 .
 .
 """)
-            Text(post.description)
+            Text(vm.currentPostModel?.description ?? "")
                 .padding()
             Text("""
 .
@@ -48,5 +47,5 @@ struct finalView: View {
 }
 
 #Preview {
-    finalView(vm: PostsViewModel(), post: Post(title: "Title", description: "asdsadsadasdasdasdasdkqwerfnlewrgmklergmkerwgfksdkngljsdgkjnsdgkjsjgbsjgbsdjkbgsdjkbgsdjkbgsdjkb", hrs: 5, mins: 12))
+    finalView(vm: PostsViewModel())
 }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class PostsViewModel: ObservableObject {
-    @Published var currentPostModel: Post?
+    @Published var currentPostModel: Post? 
     @Published var todayILearnedTextfield = "" {
         didSet {
             self.updatePostModel()

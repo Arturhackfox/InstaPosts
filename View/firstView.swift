@@ -60,16 +60,11 @@ struct firstView: View {
             .pickerStyle(.wheel)
             Spacer()
             
-            // MARK: Second view
+            // MARK: Button to SecondView
             NavigationLink {
                 secondView(vm: vm)
             } label: {
-                Text("Complete")
-                    .fontDesign(.serif)
-                    .frame(width: 100, height: 50)
-                    .foregroundStyle(Color.primary)
-                    .background(Color.yellow.opacity(0.5))
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                firstViewButton()
             }
         }
     }

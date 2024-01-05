@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct CustomGenerateButtonView: View {
+    var vm: PostsViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink {
+            finalView(vm: vm)
+        } label: {
+            Text("Generate")
+                .shadow(radius: 2)
+                .fontDesign(.serif)
+                .foregroundColor(.white.opacity(0.8))
+                .frame(width: 87, height: 32)
+                .background(Color.cyan.opacity(0.3))
+                .clipShape(RoundedRectangle(cornerRadius: 7))
+        }
+
     }
 }
 
 #Preview {
-    CustomGenerateButtonView()
+    CustomGenerateButtonView(vm: PostsViewModel())
 }

@@ -9,7 +9,12 @@ import SwiftUI
 
 struct firstViewButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Complete")
+            .fontDesign(.serif)
+            .frame(width: 100, height: 50)
+            .foregroundStyle(Color.primary)
+            .background(Color.yellow.opacity(0.5))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }
 

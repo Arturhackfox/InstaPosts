@@ -15,10 +15,8 @@ struct ContentView: View {
             firstView()
             .navigationTitle("iPost✨")
             .padding()
-            
-            
-            
         }
+        .environment(\.colorScheme, .dark)
     }
     
 }
