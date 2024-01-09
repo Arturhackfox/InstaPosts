@@ -56,6 +56,7 @@ struct firstView: View {
                     .pickerStyle(.segmented)
                     
                     // MARK: MINS
+                Divider()
                     Picker("Minutes", selection: $vm.selectedMins) {
                         ForEach(0..<61) { m in
                             Text("\(m) mins")
@@ -63,6 +64,8 @@ struct firstView: View {
                         }
                     }
                     .pickerStyle(.wheel)
+                Divider()
+
                     Spacer()
                     
                     // MARK: Button to SecondView
